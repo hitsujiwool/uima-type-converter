@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>TargetTypeSystem</name>
+  <description>Test type system</description>
+  <version>1.0</version>
+<types>
+    <typeDescription>
+      <name>net.hitsujiwool.uima.Target</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>tstring</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>tboolean</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>tfloat</name>
+          <description/>
+          <rangeTypeName>uima.cas.Float</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>tbyte</name>
+          <description/>
+          <rangeTypeName>uima.cas.Byte</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>tdouble</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>tinteger</name>
+          <description/>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>tshort</name>
+          <description/>
+          <rangeTypeName>uima.cas.Short</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>tlong</name>
+          <description/>
+          <rangeTypeName>uima.cas.Long</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>tstringarray</name>
+          <description/>
+          <rangeTypeName>uima.cas.StringArray</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

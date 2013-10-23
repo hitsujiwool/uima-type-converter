@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>net.hitsujiwool.uima.TypeConverter</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>StringConverter</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>sourceType</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>targetType</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationGroup names="conversionMap">
+        <configurationParameter>
+          <name>sinteger</name>
+          <type>String</type>
+          <multiValued>false</multiValued>
+          <mandatory>false</mandatory>
+        </configurationParameter>
+      </configurationGroup>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>targetType</name>
+        <value>
+          <string>net.hitsujiwool.uima.Target</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>sourceType</name>
+        <value>
+          <string>net.hitsujiwool.uima.Source</string>
+        </value>
+      </nameValuePair>
+      <settingsForGroup name="conversionMap">
+        <nameValuePair>
+          <name>sinteger</name>
+          <value>
+            <string>tinteger</string>
+          </value>
+        </nameValuePair>
+      </settingsForGroup>
+    </configurationParameterSettings>
+    <typeSystemDescription>
+      <imports>
+        <import location="types/SourceTypeSystem.xml"/>
+        <import location="types/TargetTypeSystem.xml"/>        
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
