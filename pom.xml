@@ -2,18 +2,25 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.hitsujiwool.uima</groupId>
   <artifactId>uima-type-converter</artifactId>
-  <version>0.1.0</version>
-  <name>Type Converter</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <github.global.server>github</github.global.server>
+  </properties>
+  <version>0.0.1</version>
   <licenses>
     <license>
-      <name>Apache 2</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <name>The MIT License</name>
+      <url>http://opensource.org/licenses/MIT</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <properties> 
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>     
-  </properties>
+  <distributionManagement>
+    <repository>
+      <id>internal.repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${project.build.directory}/maven-repo</url>
+    </repository>
+  </distributionManagement>
   <build>
     <resources>
       <resource>
@@ -34,6 +41,31 @@
           <source>1.6</source>
           <target>1.6</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.9</version>
+        <configuration>
+          <message>Maven artifacts for uima-type-converter ${project.version}</message>
+          <noJekyll>true</noJekyll>
+          <merge>true</merge>
+          <outputDirectory>${project.build.directory}/maven-repo</outputDirectory>
+          <branch>refs/heads/master</branch>
+          <includes>
+            <include>**/*</include>
+          </includes>
+          <repositoryName>maven-repo</repositoryName>
+          <repositoryOwner>hitsujiwool</repositoryOwner>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

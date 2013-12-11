@@ -153,8 +153,6 @@ public class TypeConverterTest extends TestCase {
       Object val = Target.class.getMethod("get" + StringUtils.capitalize(targetFeatureName)).invoke(t);
       outputs.add(val);
     }
-    System.out.println(inputs);
-    System.out.println(outputs);    
     assertTrue(inputs.equals(outputs));
   }
   
